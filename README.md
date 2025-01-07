@@ -107,7 +107,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any inquiries or support, contact:
 - **Author**: Aryan, Gowthami, Saikumar, Vikas. 
-- **GitHub**: [Aryan](https://github.com/AryanYogesh) [Gowthami](https://github.com/Gowthami-BN)[Saikumar](https://github.com/saikumar9136)[Vikas](https://github.com/Vikas2604)
+- **GitHub**: [Aryan](https://github.com/AryanYogesh) [Gowthami](https://github.com/Gowthami-BN) [Saikumar](https://github.com/saikumar9136) [Vikas](https://github.com/Vikas2604)
 
 ---
 

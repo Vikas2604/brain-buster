@@ -1,0 +1,29 @@
+.contactHead{
+    max-width: 100%;
+    background-color:steelblue;
+    height: 50vh;
+    color: white;
+}
+.head{
+    text-align: center;
+}
+.contactHead h1{
+    padding-top: 15vh;
+    font-size: 5rem;
+}
+.contactHead hr{
+    max-width:10vw;
+    margin: auto;   
+    height: 1vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+}
+.contactHead p{
+    padding-top: 2vh;
+}
+.form{
+    max-width: 50vw;
+    padding: 30px;
+    text-align: right;
+    box-shadow:0 3px 6px -4px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+}

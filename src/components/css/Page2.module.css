@@ -1,0 +1,24 @@
+.Page2Body{
+    text-align: center;
+}
+.Page2Body h1{
+    margin-top: 5px;
+}
+.Page2Body p{
+    text-align: left;
+    padding: 4vh 30vw 2vh 30vw;
+}
+.Page2Body h5{
+    text-align: center;
+    padding: 5vh 40vw 5vh 40vw;
+    font-size: 1rem;
+}
+.testButton{
+    color: white;
+    background-color: #3777d1;
+    padding: 10px;
+    text-decoration: none;
+}
+.buttonLink{
+    text-align: center;
+}

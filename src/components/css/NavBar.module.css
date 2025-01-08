@@ -1,38 +1,43 @@
-.navigationBar{
+.navigationBar {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 8%;
-  /* background-color: rgb(117, 147, 172); */
+  flex-wrap: wrap; 
 }
-.navigationBar ul{
+
+.navigationBar ul {
   padding: 10px 30px;
   border-radius: 30px;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0; 
 }
-.navigationBar ul li{
+
+.navigationBar ul li {
   display: inline-block;
   padding: 5px 10px;
   margin: 0 10px;
   color: #000;
+  font-size: 14px; 
 }
 
-.navigationBar button{
-    background-color: #000;
-    color: #fff;
-    padding: 12px 25px;
-    border: 0;
-    outline: 0;
-    border-radius: 30px;
-    font-size: 14px;
-    cursor: pointer;
+.navigationBar button {
+  background-color: #000;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  outline: 0;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
 }
-
 
 /* Popup */
-
 .popupOverlay {
   position: fixed;
   top: 0;
@@ -136,4 +141,40 @@ input {
 
 .toggleText span:hover {
   text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navigationBar {
+    padding: 15px 5%;
+    flex-direction: column; 
+  }
+
+  .navigationBar ul {
+    width: 100%; 
+    justify-content: space-around;
+  }
+
+  .navigationBar ul li {
+    margin: 5px 0;
+  }
+
+  .navigationBar button {
+    margin-top: 10px; 
+  }
+
+  .popupContent {
+    width: 90%; 
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigationBar ul li {
+    font-size: 12px; 
+  }
+
+  .submitButton {
+    padding: 8px 16px; 
+  }
 }

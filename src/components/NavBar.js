@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styles from './css/NavBar.module.css';
 import logo from './assets/brain-buster-high-resolution-logo-removebg-preview.png';
 import { useState } from "react";
+import axios from "axios";
 
 export const NavBar = () => {
     const [openPopup, setOpenPopup] = useState(false);
@@ -12,6 +13,7 @@ export const NavBar = () => {
         password: "",
     });
     const [showPassword, setShowPassword] = useState(false);
+    const [message, setMessage] = useState("")
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -21,18 +23,32 @@ export const NavBar = () => {
         }));
     };
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        console.log("Login details:", { email: formData.email, password: formData.password });
-        // Add your login API logic here
-        setOpenPopup(false); // Close popup after login
+        try{
+            const response = await axios.post('http://localhost:5000/api/auth/signin', {
+                email:formData.email,
+                password: formData.password,
+            });
+            console.log("Login response:", response.data);
+            setMessage('Login successfull');
+            localStorage.setItem('token',response.data.token);
+            setOpenPopup(false);
+        } catch(error) {
+            setMessage(error.response?.data?.message || 'login failed');
+        }
     };
 
-    const handleSignUp = (e) => {
+    const handleSignUp = async (e) =>{
         e.preventDefault();
-        console.log("Sign Up details:", formData);
-        // Add your sign-up API logic here
-        setOpenPopup(false); // Close popup after sign-up
+        try{
+            const response = await axios.post('http://localhost:5000/api/auth/signup', formData);
+            console.log("sign up response:", response.data);
+            setMessage('signup successfull');
+            setOpenPopup(false);
+        } catch (error) {
+            setMessage(error.response?.data?.message || 'signup failed');
+        }
     };
 
     return (

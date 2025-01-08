@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from "react-router";
 import Test from './components/Test';
-import ContactUs from './components/ContactUs';
+import ContactUs from './Pages/ContactUs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import AptitudeTestPage from './Pages/AptitudeTestPage';

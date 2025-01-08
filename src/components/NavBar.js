@@ -40,7 +40,7 @@ export const NavBar = () => {
             <div className={styles.navigationBar}>
                 <img className={styles.navLogo} src={logo} alt="Logo" width="200px" />
                 <ul>
-                    <Link to={'/'}><li>Aptitude Tests</li></Link>
+                    <Link to={'/aptitude-test'}><li>Aptitude Tests</li></Link>
                     <Link to={'/'}><li>Prep Access</li></Link>
                     <Link to={'/'}><li>Articles & News</li></Link>
                     <Link to={'/'}><li>Employers</li></Link>

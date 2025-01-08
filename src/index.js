@@ -8,6 +8,8 @@ import Test from './components/Test';
 import ContactUs from './components/ContactUs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import AptitudeTestPage from './Pages/AptitudeTestPage';
+
 
 
 
@@ -16,6 +18,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
+      <Route path='/aptitude-test' element={<AptitudeTestPage/>}/>
       <Route path='/Test' element={<Test />} />
       <Route path='/ContactUs' element={<ContactUs />} />
     </Routes>

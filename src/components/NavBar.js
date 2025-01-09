@@ -4,6 +4,9 @@ import logo from './assets/brain-buster-high-resolution-logo-removebg-preview.pn
 import { useState } from "react";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+
 
 export const NavBar = () => {
     const [openPopup, setOpenPopup] = useState(false);
@@ -80,24 +83,44 @@ export const NavBar = () => {
                     <Link to={'/'}><li>Employers</li></Link>
                     <Link to={'/ContactUs'}><li>Contact Us</li></Link>
                 </ul>
-                {loggedIn?(
-                    <div className={styles.profileContainer}>
-                        <i
-                            className={`bi bi-person-circle ${styles.profileIcon}`}
-                            onClick={()=> setShowDropDown((prev)=> !prev)}
-                            style={{fontSize:'40px', cursor:'pointer'}}
-                        />
-                        {showDropDown && (
-                            <div className={styles.dropdownmenu}>
-                                <button onClick={handleLogout} className={styles.dropdownItem}>
-                                    Logout
-                                </button>
-                            </div>
-                        )}
-                    </div>
-                ):(
-                    <button onClick={() => setOpenPopup(true)}>Sign in</button>
-                )}   
+            {loggedIn ? (
+                        <div
+                            className={`${styles.profileContainer}`}
+                            style={{ position: "relative" }}
+                        >
+                            <i
+                                className={`bi bi-person-circle ${styles.profileIcon}`}
+                                style={{ fontSize: '40px', cursor: 'pointer' }}
+                                onClick={() => setShowDropDown((prev) => !prev)}
+                            ></i>
+                            {showDropDown && (
+                                <ul
+                                    className="dropdown-menu dropdown-menu-end"
+                                    style={{
+                                        display: "block",
+                                        position: "absolute",
+                                        top: "100%",
+                                        right: 0,
+                                        zIndex: 1,
+                                    }}
+                                >
+                                    <li>
+                                        <a
+                                            className="dropdown-item"
+                                            onClick={handleLogout}
+                                            style={{ cursor: 'pointer' }}
+                                        >
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            )}
+                        </div>
+                    ) : (
+                        <button onClick={() => setOpenPopup(true)}>Sign in</button>
+                )}
+
+   
             </div>
             {openPopup &&
                 <div className={styles.popupOverlay}>

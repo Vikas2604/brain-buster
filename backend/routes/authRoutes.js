@@ -57,7 +57,7 @@ router.post('/signin', async (req,res)=>{
             });
         }
 
-        const token = jwt.sign({userId: User._id}, 'your_jwt_secret', {expiresIn: 'ih'});
+        const token = jwt.sign({userId: User._id}, 'your_jwt_secret', {expiresIn: '1h'});
 
         res.status(200).json({token});
     } catch (error) {

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../components/css/AptitudeTestPage.css';
-import logicalReasoning from  '../components/assets/LogicalReasoning.webp';
+import logicalReasoning from  '../components/assets/LogicalReasoning.jpeg';
 import numericalReasoning from '../components/assets/numericaReasoning.avif';
 import verbalReasoning from '../components/assets/VerbalReasoning.jpg';
 import abstractReasoning from '../components/assets/AbstractReasoning.png';

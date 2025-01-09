@@ -3,6 +3,7 @@ import styles from './css/NavBar.module.css';
 import logo from './assets/brain-buster-high-resolution-logo-removebg-preview.png';
 import { useState } from "react";
 import axios from "axios";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const NavBar = () => {
     const [openPopup, setOpenPopup] = useState(false);
@@ -14,6 +15,8 @@ export const NavBar = () => {
     });
     const [showPassword, setShowPassword] = useState(false);
     const [message, setMessage] = useState("")
+    const [loggedIn, setLoggedIn] = useState(false);
+    const [showDropDown, setShowDropDown] = useState(false);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -32,10 +35,15 @@ export const NavBar = () => {
             });
             console.log("Login response:", response.data);
             setMessage('Login successfull');
+            alert('Login successful')
             localStorage.setItem('token',response.data.token);
+            setLoggedIn(true);
             setOpenPopup(false);
         } catch(error) {
-            setMessage(error.response?.data?.message || 'login failed');
+            const errorMsg = error.response?.data?.message || 'Login Failed';
+            setMessage(errorMsg);
+            alert(errorMsg);
+            
         }
     };
 
@@ -45,11 +53,21 @@ export const NavBar = () => {
             const response = await axios.post('http://localhost:5000/api/auth/signup', formData);
             console.log("sign up response:", response.data);
             setMessage('signup successfull');
+            alert('signup successful');
             setOpenPopup(false);
         } catch (error) {
-            setMessage(error.response?.data?.message || 'signup failed');
+            const errorMsg = error.response?.data?.message || 'signup failed';
+            setMessage(errorMsg);
+            alert(errorMsg);
         }
     };
+
+    const handleLogout = () =>{
+        localStorage.removeItem('token')
+        setLoggedIn(false);
+        setShowDropDown(false);
+        alert('Logged out successfully');
+    }
 
     return (
         <>
@@ -57,12 +75,29 @@ export const NavBar = () => {
                 <img className={styles.navLogo} src={logo} alt="Logo" width="200px" />
                 <ul>
                     <Link to={'/aptitude-test'}><li>Aptitude Tests</li></Link>
-                    <Link to={'/'}><li>Prep Access</li></Link>
+                    <Link to={'/PrepAccess'}><li>Prep Access</li></Link>
                     <Link to={'/'}><li>Articles & News</li></Link>
                     <Link to={'/'}><li>Employers</li></Link>
                     <Link to={'/ContactUs'}><li>Contact Us</li></Link>
                 </ul>
-                <button onClick={() => setOpenPopup(true)}>Sign in</button>
+                {loggedIn?(
+                    <div className={styles.profileContainer}>
+                        <i
+                            className={`bi bi-person-circle ${styles.profileIcon}`}
+                            onClick={()=> setShowDropDown((prev)=> !prev)}
+                            style={{fontSize:'40px', cursor:'pointer'}}
+                        />
+                        {showDropDown && (
+                            <div className={styles.dropdownmenu}>
+                                <button onClick={handleLogout} className={styles.dropdownItem}>
+                                    Logout
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                ):(
+                    <button onClick={() => setOpenPopup(true)}>Sign in</button>
+                )}   
             </div>
             {openPopup &&
                 <div className={styles.popupOverlay}>

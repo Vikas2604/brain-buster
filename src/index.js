@@ -9,6 +9,7 @@ import ContactUs from './Pages/ContactUs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import AptitudeTestPage from './Pages/AptitudeTestPage';
+import PrepAccess from './Pages/PrepAccess';
 
 
 
@@ -21,6 +22,7 @@ root.render(
       <Route path='/aptitude-test' element={<AptitudeTestPage/>}/>
       <Route path='/Test' element={<Test />} />
       <Route path='/ContactUs' element={<ContactUs />} />
+      <Route path='/PrepAccess' element={<PrepAccess/>}/>
     </Routes>
   </BrowserRouter>
 );

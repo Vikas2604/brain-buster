@@ -1,0 +1,242 @@
+.aptHero{
+    background-image: url('../../assets/images/notebook-2386034.jpg');
+    background-size: cover;  
+    background-position: center; 
+    height: 60vh;  
+    width: 100%;  
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+    text-align: center;
+}
+
+.atpHead{
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+}
+.prep{
+    text-align: center;
+}
+
+
+.boxContainer{
+    width: 70vw;
+    height: 20vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(39, 54, 71);
+    color: white;
+    position: relative;
+    top: -10vh;    
+}
+
+.boxContainer h4{
+    font-size: 2rem;
+    padding: 4vh 4vw;
+}
+
+.boxContainer h5{
+    font-size: 1.2rem;
+    padding: 5vh 2vw;
+}
+
+.slogan{
+    text-align: center;
+}
+
+.featuresSection {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 2rem;
+   max-width: 1200px;
+   margin: 2rem auto;
+   padding: 1rem;
+   text-align: center;
+   box-sizing: border-box;
+ }
+ 
+.featureCard {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.featureDescription {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+.featureHighlight {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.featureRow {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.featureRow.reverse {
+  flex-direction: row-reverse;
+}
+
+.featureImage img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featureText {
+  max-width: 600px;
+}
+
+.featureTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #2b2b2b;
+}
+
+.featureText p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+
+.containerPrep {
+  display: flex;
+  height: 50vh;
+}
+
+.card {
+  flex: 1;
+  background-color: #003f4e; 
+  color: white;
+  padding: 80px; 
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:nth-child(2) {
+  background-color: #142d40; 
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+   font-size: 2rem;
+   margin: 10px 0;
+ }
+ 
+.card p {
+   font-size: 1rem;
+   line-height: 1.5;
+   padding: 2vh 5vw;
+}
+ .link {
+   text-decoration: none;
+   color: inherit;
+   display: block;
+}
+.pageWrapper {
+    /* padding: 0 2rem;  */
+    box-sizing: border-box;
+  }
+  
+ 
+ /* Responsive Design */
+ @media (max-width: 768px) {
+   .featureRow {
+     flex-direction: column;
+   }
+   .featuresSection {
+       grid-template-columns: 1fr;
+     }
+   .featureRow.reverse {
+     flex-direction: column;
+   }
+   .aptHero {
+    height: 40vh;
+    background-position: top;
+  }
+
+  .atpHead {
+    font-size: 2.5rem;
+  }
+  .boxContainer {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .boxContainer h4 {
+    font-size: 1.5rem;
+  }
+
+  .boxContainer h5 {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .featureHighlight {
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .featureRow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .featureImage img {
+    max-width: 100%; 
+  }
+
+  .featureText {
+    padding: 1rem;
+  }
+  .containerPrep {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card {
+    padding: 40px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+ }
+ 

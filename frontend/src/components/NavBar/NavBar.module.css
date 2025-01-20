@@ -1,0 +1,181 @@
+.navigationBar {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  flex-wrap: wrap; 
+}
+
+.navigationBar ul {
+  padding: 10px 30px;
+  border-radius: 30px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0; 
+}
+
+.navigationBar ul li {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 10px;
+  color: #000;
+  font-size: 14px; 
+}
+
+.navigationBar button {
+  background-color: #000;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  outline: 0;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Popup */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.passwordWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.togglePassword {
+  position: absolute;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.togglePassword:hover {
+  text-decoration: underline;
+}
+
+.submitButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #45a049;
+}
+
+.toggleText {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.toggleText span {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toggleText span:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navigationBar {
+    padding: 15px 5%;
+    flex-direction: column; 
+  }
+
+  .navigationBar ul {
+    width: 100%; 
+    justify-content: space-around;
+  }
+
+  .navigationBar ul li {
+    margin: 5px 0;
+  }
+
+  .navigationBar button {
+    margin-top: 10px; 
+  }
+
+  .popupContent {
+    width: 90%; 
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigationBar ul li {
+    font-size: 12px; 
+  }
+
+  .submitButton {
+    padding: 8px 16px; 
+  }
+}
+  

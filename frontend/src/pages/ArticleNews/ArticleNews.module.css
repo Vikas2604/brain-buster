@@ -1,0 +1,100 @@
+/* Centered Button Section */
+.center {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.primary {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primary:hover {
+  background-color: #0056b3;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card Styles */
+.card {
+  flex: 1 1 300px;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styles */
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Info Section */
+.info {
+  padding: 15px;
+  text-align: center;
+}
+
+.info h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Button Styles */
+.btn2 {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn2:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+      flex: 1 1 45%;
+      max-width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+      flex: 1 1 100%;
+      max-width: 100%;
+  }
+}

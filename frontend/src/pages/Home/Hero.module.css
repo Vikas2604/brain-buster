@@ -1,0 +1,286 @@
+.backgroundImage {
+  background-image: url('../../assets/images/freepik__expand__39696.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.text, .para1 {
+  color: white;
+  padding-left: 2vw;
+}
+
+.text {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.para1 {
+  font-size: 1rem;
+  margin: 10px 0 20px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.coloredWord {
+  color: green;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: rgb(71, 162, 71);
+  height: 50px;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-left: 2vw;
+}
+
+.btn:hover {
+  background-color: rgb(46, 101, 46);
+}
+
+.btn:active {
+  background-color: rgb(71, 162, 71);
+}
+
+.Page2Body {
+  text-align: center;
+}
+
+.Page2Body h1 {
+  margin-top: 5px;
+}
+
+.Page2Body p, .Page2Body h5 {
+  padding: 4vh 30vw 2vh 30vw;
+  text-align: left;
+}
+
+.Page2Body h5 {
+  text-align: center;
+  font-size: 1rem;
+  padding: 5vh 40vw;
+}
+
+.testButton {
+  color: white;
+  background-color: #3777d1;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.buttonLink {
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .Page2Body p, .Page2Body h5 {
+    padding: 4vh 20vw 2vh 20vw;
+  }
+
+  .Page2Body h5 {
+    padding: 5vh 25vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .backgroundImage {
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  }
+
+  .para1 {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 150px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .Page2Body p {
+    padding: 4vh 10vw 2vh 10vw;
+    font-size: 0.9rem;
+  }
+
+  .Page2Body h5 {
+    padding: 5vh 15vw;
+    font-size: 0.9rem;
+  }
+
+  .testButton {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 1.2rem;
+  }
+
+  .para1 {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    width: 140px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+
+  .Page2Body p {
+    padding: 4vh 5vw 2vh 5vw;
+    font-size: 0.8rem;
+  }
+
+  .Page2Body h5 {
+    padding: 5vh 10vw;
+    font-size: 0.8rem;
+  }
+
+  .testButton {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+}
+
+/* Potential Section */
+/* Potential Section */
+.potentialCont {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: darkcyan;
+}
+
+.potentialContent {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  color: white;
+  margin: 20px 0;
+}
+
+.potentialContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.potentialContent p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.potentialButton {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.potentialButton button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.potentialButton .primary {
+  background-color: white;
+  color: darkcyan;
+  border: none;
+}
+
+.potentialButton .primary:hover {
+  background-color: #f0f0f0;
+}
+
+.potentialButton .secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.potentialButton .secondary:hover {
+  background-color: white;
+  color: darkcyan;
+}
+
+.imageContainer {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.responsiveImage {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover; 
+}
+
+@media (min-width: 768px) {
+  .potentialCont {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .potentialContent {
+    text-align: left;
+    width: 50%;
+  }
+
+  .imageContainer {
+    width: 50%;
+    text-align: right;
+  }
+}
+
+@media (max-width: 480px) {
+  .potentialContent h1 {
+    font-size: 2rem;
+  }
+
+  .potentialContent p {
+    font-size: 1rem;
+  }
+
+  .potentialButton button {
+    font-size: 0.9rem;
+  }
+
+  .imageContainer {
+    margin-top: 10px;
+  }
+
+  .responsiveImage {
+    border-radius: 0; /* Adjust for smaller screens if necessary */
+  }
+}

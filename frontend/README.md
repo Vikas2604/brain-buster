@@ -104,4 +104,3 @@ This project is licensed under the MIT License. See the [LICENSE](../LICENSE) fi
 
 ---
 
-*Note: This README is based on standard practices and may need adjustments to align with the specific details of your project.*

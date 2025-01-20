@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "question": "What is the next number in the series? 2, 4, 6, 8, ?",
+        "options": [
+            "9",
+            "10",
+            "12",
+            "14"
+        ],
+        "answer": "B"
+    },
+    {
+        "id": 2,
+        "question": "If a pen costs \u20b910 and a notebook costs \u20b950, what is the total cost of 3 pens and 2 notebooks?",
+        "options": [
+            "\u20b9120",
+            "\u20b9160",
+            "\u20b9130",
+            "\u20b9170"
+        ],
+        "answer": "D"
+    },
+    {
+        "id": 3,
+        "question": "A train 100 meters long is running at a speed of 50 km/hr. How much time will it take to pass a pole?",
+        "options": [
+            "7.2 seconds",
+            "6.8 seconds",
+            "8.4 seconds",
+            "9 seconds"
+        ],
+        "answer": "A"
+    },
+    {
+        "id": 4,
+        "question": "What is the smallest prime number?",
+        "options": [
+            "1",
+            "2",
+            "3",
+            "5"
+        ],
+        "answer": "B"
+    },
+    {
+        "id": 5,
+        "question": "If 5x = 25, what is the value of x?",
+        "options": [
+            "2",
+            "3",
+            "5",
+            "10"
+        ],
+        "answer": "C"
+    },
+    {
+        "id": 6,
+        "question": "What is 15% of 200?",
+        "options": [
+            "20",
+            "25",
+            "30",
+            "35"
+        ],
+        "answer": "C"
+    },
+    {
+        "id": 7,
+        "question": "If a car travels 60 km in 2 hours, what is its speed?",
+        "options": [
+            "30 km/hr",
+            "25 km/hr",
+            "20 km/hr",
+            "15 km/hr"
+        ],
+        "answer": "A"
+    },
+    {
+        "id": 8,
+        "question": "What is the square root of 144?",
+        "options": [
+            "10",
+            "11",
+            "12",
+            "14"
+        ],
+        "answer": "C"
+    },
+    {
+        "id": 9,
+        "question": "Which number is an even number?",
+        "options": [
+            "17",
+            "23",
+            "42",
+            "55"
+        ],
+        "answer": "C"
+    },
+    {
+        "id": 10,
+        "question": "If a bag contains 5 red balls, 3 blue balls, and 2 green balls, what is the total number of balls?",
+        "options": [
+            "10",
+            "12",
+            "11",
+            "9"
+        ],
+        "answer": "A"
+    }
+]

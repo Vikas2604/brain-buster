@@ -56,7 +56,7 @@ To set up the project locally, follow these steps:
 
 6. **Access the application**:
 
-   Open your browser and navigate to `http://localhost:3000` to use the application.
+   Open your browser and navigate to `http://VITE_REACT_APP_BACKEND_BASEURL` to use the application.
 
 ## Usage
 
